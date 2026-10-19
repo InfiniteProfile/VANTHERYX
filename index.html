@@ -1,0 +1,63 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+  <meta name="theme-color" content="#050507">
+  <meta name="description" content="VANTHERYX — One universe. Infinite identities. No final destination.">
+  <title>VANTHERYX — The Infinite Identity Dimension</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header class="topbar">
+    <a class="brand" href="./" aria-label="VANTHERYX home">
+      <span class="brand-mark" aria-hidden="true">V</span>
+      <span><strong>VANTHERYX</strong><small>THE INFINITE IDENTITY DIMENSION</small></span>
+    </a>
+    <div class="header-right">
+      <span id="position" class="position">IDENTITY 000001</span>
+      <button id="searchToggle" class="icon-button" aria-label="Search identity" title="Search identity">
+        <svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="10.8" cy="10.8" r="6.8"></circle><path d="m16 16 5 5"></path></svg>
+      </button>
+    </div>
+  </header>
+
+  <section class="intro" aria-label="Introduction">
+    <div class="eyebrow"><span class="pulse"></span> AN ARCHIVE WITHOUT A FINAL RECORD</div>
+    <h1>ONE UNIVERSE.<br><em>INFINITE IDENTITIES.</em></h1>
+    <p>Every face hides a universe.</p>
+  </section>
+
+  <main>
+    <div class="stream-heading">
+      <span>IDENTITY STREAM</span><span class="stream-line"></span><span class="live-label">CONTINUOUS</span>
+    </div>
+    <div id="feed" class="feed" aria-live="polite"></div>
+    <div id="sentinel" class="sentinel" aria-hidden="true"><span></span><span></span><span></span></div>
+    <p id="feedStatus" class="feed-status">The archive continues beyond the visible horizon.</p>
+  </main>
+
+  <section id="searchPanel" class="search-panel" hidden aria-label="Find an identity">
+    <form id="searchForm" class="search-box">
+      <label for="identityInput">LOCATE AN IDENTITY</label>
+      <div class="search-row">
+        <input id="identityInput" inputmode="numeric" autocomplete="off" spellcheck="false" placeholder="Enter any positive ID…" aria-describedby="searchMessage">
+        <button type="submit">OPEN <span aria-hidden="true">↗</span></button>
+        <button type="button" id="searchClose" class="close-search" aria-label="Close search">×</button>
+      </div>
+      <p id="searchMessage" class="search-message">Decimal digits only. Leading zeroes are normalized.</p>
+    </form>
+  </section>
+
+  <section id="identityModal" class="identity-modal" hidden aria-modal="true" role="dialog" aria-labelledby="modalName">
+    <div class="modal-backdrop" data-close="true"></div>
+    <article class="identity-detail">
+      <button id="modalClose" class="modal-close" aria-label="Close identity">×</button>
+      <div id="detailContent"></div>
+    </article>
+  </section>
+
+  <script src="generator.js"></script>
+  <script src="script.js"></script>
+</body>
+</html>
